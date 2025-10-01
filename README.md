@@ -1,3 +1,3 @@
 # JavaScript-Junk-App
 
-「JavaScript-teach」で作ったものの中で、アプリとして出来上がったものを記録する
+休学中に作成したJavaScriptのコードを記録する

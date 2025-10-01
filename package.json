@@ -1,10 +1,10 @@
 {
-  "name": "javascript-app",
+  "name": "JavaScript-Junk-App",
   "version": "1.0.0",
-  "description": "「JavaScript-teach」で作ったものの中で、アプリとして出来上がったものを記録する",
+  "description": "休学中に作成したJavaScriptのコードを記録する",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests\"",
     "serve": "http-server -c-1 -p 5173 ."
   },
   "keywords": [],

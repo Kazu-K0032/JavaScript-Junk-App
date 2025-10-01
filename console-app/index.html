@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../Header.css" />
+    <link rel="stylesheet" href="../site.css" />
+    <script>
+      window.onload = function () {};
+    </script>
+  </head>
+  <body>
+    <iframe src="../Header.html" title="共通ヘッダー"></iframe>
+    <div class="container">
+      <h3>consoleオブジェクトで使えるメソッド集</h3>
+      <p>
+        参考URL：<a
+          href="https://qiita.com/baby-degu/items/1046763163bc794870ea"
+          target="_blank"
+          >これ</a
+        >
+      </p>
+
+      <input
+        type="button"
+        value="console.clearボタン"
+        onClick="console.clear()"
+      />
+    </div>
+
+    <script>
+      console.time();
+
+      // グループ１
+      console.group("group1-メジャー");
+      console.log("hello");
+      console.error("hello");
+      console.warn("hello");
+      console.groupEnd();
+
+      //　グループ２
+      console.group("group2-count");
+      for (let i = 0; i < 10; i++) {
+        console.count(i);
+      }
+      console.groupEnd();
+
+      // グループ３
+      console.group("group3-特殊");
+      const styleContent =
+        "font-size: 20px; background-color: white; color: red; border: 2px solid orange;";
+      console.log("%c hello", styleContent);
+
+      const style =
+        "padding: 0.5em; color: #010101; background-color: #eaf3ff; border-bottom: solid 3px #516ab6;";
+      console.log("%c Hello World", style);
+
+      const parsonal = { name: "kuji", age: 21, hoby: "散歩" };
+      console.table(parsonal);
+      console.dir(parsonal);
+      console.groupEnd();
+
+      console.timeEnd();
+    </script>
+  </body>
+</html>

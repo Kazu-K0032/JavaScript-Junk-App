@@ -1,0 +1,17 @@
+{
+  "name": "javascript-app",
+  "version": "1.0.0",
+  "description": "「JavaScript-teach」で作ったものの中で、アプリとして出来上がったものを記録する",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server -c-1 -p 5173 ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": "true",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

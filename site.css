@@ -1,0 +1,104 @@
+/* Base typography */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, Arial,
+    sans-serif;
+  color: #222;
+  line-height: 1.7;
+  background: #fafafa;
+}
+
+/* Layout helpers */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 1em 0 0.5em;
+}
+
+p,
+ul,
+ol,
+table,
+input,
+button {
+  margin: 0.5em 0;
+}
+
+/* Header iframe spacing */
+iframe[src$="Header.html"] {
+  display: block;
+  width: 100%;
+  height: 56px;
+  border: none;
+}
+
+/* Utilities */
+.mt-16 {
+  margin-top: 16px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+/* Table tweaks (when Bootstrap not present) */
+table:not(.table) {
+  width: 100%;
+  border-collapse: collapse;
+}
+table:not(.table) th,
+table:not(.table) td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+}
+
+/* Forms */
+input[type="text"],
+input[type="date"],
+input[type="button"],
+button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input[type="text"],
+input[type="date"] {
+  background: #fff;
+}
+
+input[type="button"],
+button {
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background: #efefef;
+}
+
+/* Links */
+a {
+  color: #0b6acb;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+  border-bottom: 1px solid #ffe0e0;
+  background: #fff7f7;
+}
+
+.header a {
+  color: #cc3a3a;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 120ms ease;
+}
+
+.header a:hover,
+.header a:focus {
+  background: #ffeaea;
+}

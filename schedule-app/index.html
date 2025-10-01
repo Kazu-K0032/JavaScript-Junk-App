@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>スケジュールアプリ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../Header.css" />
+    <link rel="stylesheet" href="../site.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const removeClick = (event) => {
+        // todo remove ボタンのクリック処理
+        event.currentTarget.parentNode.parentNode.remove();
+        console.log("event：" + event);
+        console.log("event.currentTarget：" + event.currentTarget);
+        console.log(
+          "event.currentTarget.parentNode：" + event.currentTarget.parentNode
+        );
+        // currentTarget：イベントの現在のターゲットを特定
+        // parentNode：親エレメントを取得できる => tdタグ
+      };
+
+      const addClick = () => {
+        if (document.getElementById("add_date").value == "") {
+          alert("日付が設定されていません");
+          return;
+        }
+        if (document.getElementById("add_text").value == "") {
+          alert("項目が設定されていません");
+          return;
+        }
+
+        // 日付
+        let newRow = document.createElement("tr");
+        // 日付列
+        let dateTd = document.createElement("td");
+        // 内容列
+        let contentTd = document.createElement("td");
+        // 削除列
+        let removeTd = document.createElement("td");
+        // remove
+        let removeButton = document.createElement("input");
+        removeButton.setAttribute("type", "button");
+        removeButton.value = "remove";
+        removeButton.onclick = removeClick;
+
+        //Toの中身を設定
+        dateTd.innerText = document.getElementById("add_date").value;
+        contentTd.innerText = document.getElementById("add_text").value;
+        removeTd.appendChild(removeButton);
+
+        //TRheToを追加
+        newRow.appendChild(dateTd);
+        newRow.appendChild(contentTd);
+        newRow.appendChild(removeTd);
+
+        document.getElementById("table_body").appendChild(newRow);
+      };
+
+      window.onload = () => {
+        document.getElementById("add_button").onclick = addClick;
+      };
+    </script>
+  </head>
+  <body>
+    <iframe src="../Header.html" title="共通ヘッダー"></iframe>
+    <div class="container">
+      <h1>スケジュールアプリ</h1>
+      <div class="mb-16 mt-16">
+        <input type="date" id="add_date" />
+        <input type="text" id="add_text" placeholder="予定を入力" />
+        <input type="button" id="add_button" value="add" />
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col">日付</th>
+            <th class="col-8">内容</th>
+            <th class="col">削除</th>
+          </tr>
+        </thead>
+        <tbody id="table_body"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

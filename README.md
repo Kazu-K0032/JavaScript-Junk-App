@@ -16,7 +16,7 @@
 <img src="./docs/images/ui-2.png" width=48% />
 <img src="./docs/images/ui-3.png" width=48% />
 
-## セットアップ手
+## セットアップ手順
 
 1. 前提
 

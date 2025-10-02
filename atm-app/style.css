@@ -1,0 +1,27 @@
+/* ATM app specific styles */
+#app {
+  text-align: center;
+}
+
+.inputArea,
+.displayArea,
+.tradingAccountArea {
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.inputArea input,
+.inputArea button {
+  margin: 8px;
+  padding: 8px 12px;
+}
+
+.tradingAccountArea div {
+  margin: 8px 0;
+  padding: 8px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}

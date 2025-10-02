@@ -9,6 +9,7 @@ body {
   color: #222;
   line-height: 1.7;
   background: #fafafa;
+  margin-top: 56px;
 }
 
 /* Layout helpers */
@@ -41,6 +42,18 @@ iframe[src$="Header.html"] {
   width: 100%;
   height: 56px;
   border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+iframe[src$="Header.html"]::-webkit-scrollbar {
+  display: none;
 }
 
 /* Utilities */

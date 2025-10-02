@@ -2,18 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   height: 56px;
   border-bottom: 1px solid #ffe0e0;
   background: #fff7f7;
+  flex-wrap: wrap;
+  padding: 8px 16px;
+  min-height: 56px;
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.header::-webkit-scrollbar {
+  display: none;
 }
 
 .header a {
   color: #cc3a3a;
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 6px 8px;
   border-radius: 6px;
   transition: background-color 120ms ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 14px;
 }
 
 .header a:hover,
